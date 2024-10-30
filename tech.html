@@ -1,0 +1,1184 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box with WhatsApp Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(51, 51, 51, 0.8); 
+            padding: 20px;
+        }
+
+        .comment-box {
+            background-color: rgba(51, 51, 51, 0.8);
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .comment-input {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .comment-input textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            resize: none;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        .comment-input button {
+            background-color: #25d366; /* WhatsApp green color */
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .comment-input button:disabled {
+            background-color: #b0d4ff;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="comment-box">
+        <div class="comment-input">
+            <textarea id="comment" rows="1" placeholder="Support/Writetothedeveloper..."></textarea>
+            <button id="submitBtn" disabled>WhatsApp developer</button>
+        </div>
+    </div>
+
+    <script>
+        const commentInput = document.getElementById('comment');
+        const submitBtn = document.getElementById('submitBtn');
+
+        const whatsappNumber = 'whatsapp:+256742632315'; // Replace with the user's WhatsApp number (use full international format)
+
+        commentInput.addEventListener('input', function() {
+            if (commentInput.value.trim() !== "") {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        });
+
+        submitBtn.addEventListener('click', function() {
+            let commentText = commentInput.value.trim();
+
+            if (commentText === "") {
+                return;
+            }
+
+            // Generate WhatsApp Click-to-Chat URL with the message
+            let whatsappURL = `https://wa.me/${+256742632315}?text=${encodeURIComponent(commentText)}`;
+
+            // Open WhatsApp with the comment pre-filled
+            window.open(whatsappURL, '_blank');
+
+            // Clear the comment box and disable the button
+            commentInput.value = "";
+            submitBtn.disabled = true;
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 2000px; /* Just to create a scrollable page */
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        /* Scroll to Top Button Styling */
+        .scrollToTop {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: rgba(34, 34, 34, 0.8);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px; /* Icon size */
+        }
+
+        .scrollToTop:hover {
+            background-color: cyan; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+ 
+
+
+    <!-- Scroll to Top Button -->
+    <button class="scrollToTop" id="scrollToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i> <!-- Font Awesome Icon -->
+    </button>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Show the button when the user scrolls down 20px from the top
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block"; // Show the button
+            } else {
+                scrollToTopBtn.style.display = "none"; // Hide the button
+            }
+        };
+
+        // Scroll to the top of the document smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll
+            });
+        }
+    </script>
+    
+     
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  
+        
+           
+        <img src="mana.jpg" height="60" width="30"</title>
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        
+        
+        
+        
+        
+        
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #141414;
+            color: white;
+            
+            margin-bottom: 100px; /* Ensure space for the bottom navbar */
+            background-image: url('bada.png'); /
+           
+             background image: url(c.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: repeat;
+            animation: moveBackground 8s linear infinite;
+        }
+
+        /* Keyframes for background movement */
+        @keyframes moveBackground {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 5 5; /* Adjust this value for speed and direction */
+            }
+        }
+
+        /* Upper bar (navbar) with transition of 4 pictures */
+        .navbar {
+            height: 100px;
+            width:50 px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:  15px;
+            animation: bannerTransition 6s infinite; /* 16s to go through 4 images, each for 4 seconds */
+        }
+
+        /* Keyframes for banner background transition */
+      
+
+        .navbar h1 {
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            padding: 10px;
+            width: 225px;
+            border: none;
+            border-radius: 20px;
+        }
+  .filter-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(51, 51, 51, 0.8); /* Added transparency */
+            padding: 10px;
+            margin:15px 4px;
+            
+            z-index: 4;
+      
+        }
+
+        .filter-button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 20px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .filter-button:hover {
+            background-color: #555;
+        }
+
+        .container {
+            padding: 20px;
+            position: center;
+            z-index: 8px;
+            display: flex;
+            flex-direction: row; /* Stack tutorial cards vertically */
+        }
+
+        .tutorial-card {
+            background-color: white; /* Added transparency */
+            border-radius: 25px;
+            padding: 20px;
+            margin-bottom: 100px;
+            order: 2; /* Default order to 2, meaning non-matches will appear lower */
+            transition: order 100s ease; /* Smooth transition when order changes */
+        }
+
+        .tutorial-card img {
+            
+            width: 10%;
+            height:10%;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+      
+        
+        .tutorial-info {
+            margin-top: -2px;
+        }
+
+        .tutorial-info h2 {
+            font-size: 20px;
+        }
+
+        .tutorial-info p {
+            margin-top: 2px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .actions .like-save {
+            display: flex;
+        }
+
+        .like-save button {
+            background: none;
+            border: none;
+            color: white;
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .like-save button:hover {
+            color: #bbb;
+        }
+
+        /* Bottom navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(34, 34, 34, 0.8); /* Added transparency */
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 2;
+            z-index: 6px;
+        }
+
+        .bottom-nav button {
+            background: none;
+            border: icon;
+           border-radius:50px;
+            color: white;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .bottom-nav button:hover {
+            color: #4f81;
+        }
+    
+    
+        
+         * {
+            box-sizing: border-box;
+        }
+.slider {
+            width: 255%;
+            max-width: 350px;
+            position: ;
+            overflow: hidden;
+            border-radius: 35px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5ease-in-out;
+            width: 30%;
+        }
+
+        .slides img {
+            width: -10px;
+            height: 150px;
+            
+            border-radius: 15px;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 24%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(8%);
+        }
+
+        .prev, .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 30%;
+            user-select: none;
+            font-size: 30px;
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 5px;
+            width: 7%;
+            text-align: center;
+        }
+
+        .dot {
+            display: inline-block;
+            height: 0px;
+            width: 0px;
+            margin: 0px 0px;
+            background-color: #bbb;
+            border-radius: 0%;
+            cursor: pointer;
+            transition: background-color 0.1s;
+        }
+
+        .dot.active {
+            background-color: #717171;
+        }</style>
+      <style>
+         .like-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #4267B2; /* Facebook blue */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .like-button:hover {
+            background-color: #365899; /* Darker blue on hover */
+        }
+
+        .like-button .thumb-icon {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .like-button .like-text {
+            font-weight: bold;
+        }
+      </style>
+        
+        
+    </style>
+</head>
+<body>
+     <style>
+       
+
+    </style>
+    
+
+  
+
+        
+ 
+    
+    
+    
+    
+    
+    
+</marque>
+    
+<div class="slider">
+    <div class="slides">
+        <!-- Add your images here -->
+        <img src="lap.jpg" alt="Movie 1">
+        <img src="bit.jpg" alt="Movie 2">
+        <img src="p.png" alt="Movie 3">
+        <img src="e.png" alt="Movie 4">
+    </div>
+
+    <div class="navigation">
+        <span class="prev" onclick="moveSlides(-1)">&#10094;</span>
+        <span class="next" onclick="moveSlides(1)">&#10095;</span>
+    </div>
+
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+         
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = dots.length;
+
+    function showSlides() {
+        slideIndex++;
+        if (slideIndex >= totalSlides) {
+            slideIndex = 0;
+        }
+        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[slideIndex].classList.add('active');
+    }
+
+    function moveSlides(n) {
+        slideIndex += n;
+        if (slideIndex >= totalSlides) {
+            slideIndex = 0;
+        }
+        if (slideIndex < 0) {
+            slideIndex = totalSlides - 1;
+        }
+        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[slideIndex].classList.add('active');
+    }
+
+    function currentSlide(n) {
+        slideIndex = n - 1;
+        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[slideIndex].classList.add('active');
+    }
+
+    // Auto slide every  seconds
+    setInterval(showSlides, 900);</script>
+</script>
+
+        
+
+</body><br>
+
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .post-container {
+            background-color: rgba(34, 34, 34, 0.9); /* Added transparency */
+            border-radius: 25px;
+            padding: 20px;
+            margin-bottom: 20px;
+            order: 2; /* Default order to 2, meaning non-matches will appear lower */
+            transition: order 100s ease;
+        }
+        .post-container img {
+            width: 100%;
+            height:50%;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .post-details {
+            text-align: left;
+            padding: 10px;
+        }
+        .post-actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .add-post-btn {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border-radius: 50%;
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            cursor: pointer;
+        }
+        #fileInput {
+            display: none;
+        }
+        /* Modal styling for input form */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        .modal input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .modal button {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="postSection"></div>
+
+    <!-- + Add Post Button fixed at the bottom right -->
+    <button class="add-post-btn" onclick="document.getElementById('fileInput').click()">+</button>
+
+    <!-- Hidden file input for choosing images -->
+    <input type="file" id="fileInput" accept="image/*" onchange="openModal(event)">
+
+    <!-- Modal for entering post details -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <h3>Enter Product Details</h3>
+            <input type="text" id="postTitle" placeholder="Product Title" required>
+            <input type="text" id="postDescription" placeholder="Product Description" required>
+            <input type="number" id="postPrice" placeholder="Product Price" required>
+            <input type="tel" id="postContact" placeholder="Contact Number" required>
+            <button onclick="addNewPost()">Add Post</button>
+        </div>
+    </div>
+
+    <script>
+        let postIndex = localStorage.getItem('postIndex') ? parseInt(localStorage.getItem('postIndex')) : 0;
+        let imageUrl = '';
+
+        // Function to open the modal when an image is selected
+        function openModal(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imageUrl = e.target.result;
+                    document.getElementById('postModal').style.display = 'flex'; // Show the modal
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Function to add a new post with the chosen image and user input
+        function addNewPost() {
+            const title = document.getElementById('postTitle').value;
+            const description = document.getElementById('postDescription').value;
+            const price = document.getElementById('postPrice').value;
+            const contact = document.getElementById('postContact').value;
+
+            if (!title || !description || !price || !contact || !imageUrl) {
+                alert("Please fill all fields and select an image.");
+                return;
+            }
+
+            // Create a new post object
+            const post = {
+                id: postIndex,
+                title,
+                description,
+                price,
+                contact,
+                imageUrl,
+                views: 0,
+                likes: 0
+            };
+
+            // Save the post to localStorage
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts.unshift(post); // Add the new post to the beginning of the array
+            localStorage.setItem('posts', JSON.stringify(posts));
+            localStorage.setItem('postIndex', postIndex + 1);
+
+            // Create the post element in the DOM
+            createPostElement(post);
+
+            // Increment post index for next post
+            postIndex++;
+
+            // Close the modal and reset form fields
+            document.getElementById('postTitle').value = '';
+            document.getElementById('postDescription').value = '';
+            document.getElementById('postPrice').value = '';
+            document.getElementById('postContact').value = '';
+            document.getElementById('postModal').style.display = 'none';
+        }
+
+        // Function to create a post element
+        function createPostElement(post) {
+            const postContainer = document.createElement('div');
+            postContainer.classList.add('post-container');
+
+            // Create the image element with the selected image
+            const img = document.createElement('img');
+            img.src = post.imageUrl;
+            img.alt = 'Product Image';
+            img.onclick = function() { increaseViews(post.id); };
+
+            // Create post details section with title, description, price, and contact
+            const postDetails = document.createElement('div');
+            postDetails.classList.add('post-details');
+            postDetails.innerHTML = `
+                <h4>${post.title}</h4>
+                <p>Description: ${post.description}</p>
+                <p>Price: UGX ${post.price}</p>
+                <p>Contact: <a href="tel:${post.contact}">${post.contact}</a></p>
+                <p id="viewCount${post.id}">Views: ${post.views}</p>
+                <p id="likeCount${post.id}">Likes: ${post.likes}</p>
+            `;
+
+            // Create action buttons (like and share)
+            const postActions = document.createElement('div');
+            postActions.classList.add('post-actions');
+            postActions.innerHTML = `
+                <button onclick="increaseLikes(${post.id})">
+                    <i class="fas fa-thumbs-up thumb-icon"></i>
+                    <span class="like-text">Like</span>
+                </button>
+                <button onclick="sharePost('${post.title}', '${post.description}', '${post.price}', '${post.contact}')">
+                    🔗 Share
+                </button>
+            `;
+
+            // Append image, details, and actions to the post container
+            postContainer.appendChild(img);
+            postContainer.appendChild(postDetails);
+            postContainer.appendChild(postActions);
+
+            // Add the new post at the top of the section
+            const postSection = document.getElementById('postSection');
+            postSection.insertBefore(postContainer, postSection.firstChild);
+        }
+
+        // Function to increase likes for a specific post
+        function increaseLikes(index) {
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
+            let post = posts.find(p => p.id === index);
+            post.likes++;
+            document.getElementById(`likeCount${index}`).innerText = `Likes: ${post.likes}`;
+            localStorage.setItem('posts', JSON.stringify(posts));
+        }
+
+        // Function to increase views for a specific post
+        function increaseViews(index) {
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
+            let post = posts.find(p => p.id === index);
+            post.views++;
+            document.getElementById(`viewCount${index}`).innerText = `Views: ${post.views}`;
+            localStorage.setItem('posts', JSON.stringify(posts));
+        }
+
+        // Function to share the post via social
+  // Function to share the post via social media
+        function sharePost(title, description, price, contact) {
+            const postText = `Check out this product: ${title}\nDescription: ${description}\nPrice: UGX ${price}\nContact: ${contact}`;
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: postText,
+                    url: window.location.href,
+                }).catch(err => console.error('Error sharing:', err));
+            } else {
+                alert('Your browser does not support the Web Share API.');
+            }
+        }
+
+        // Function to load posts from localStorage when the page loads
+        window.onload = function() {
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts.forEach(post => createPostElement(post));
+        };
+    </script>
+
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    
+    
+    
+       <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.cs"
+    />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .swiper-container {
+            width: 100%;
+            padding: 2px;
+            overflow: hidden;
+        }
+        .swiper-slide {
+            display: ;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 500px;
+            height:150px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        .card img {
+            max-width: 10%;
+            height: 12px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 2px;
+        }
+        .card-content h3 {
+            margin: 10px 10;
+        }
+        .card-content  p{
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Swiper container -->
+    
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+         
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.s"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 2,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Enable touch gestures
+            grabCursor: true,
+        });
+    
+            
+
+   
+</script>
+</div>
+
+ 
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+    
+    
+    
+       
+
+    
+    
+
+
+  
+      
+<!-- Tutorial Card 2 -->
+      
+                            
+                     
+    <div class="bottom-nav">
+        <button>
+            <span>
+        <a href="index.html""><img src="product.png"width="50" height="50" ></a>  
+            </span>
+            <span><b>PRODUCTS</b> </span>
+        </button>
+            
+        <button>
+        
+            <span>   <a href="services.html">
+            <img src="service.png" width="50" height="50"></a></span>
+            <span><b>SERVICES</b></span> 
+        
+        </button>
+        <button src="tech.html">
+            <span>  <a href="tech.html"><img src="tech.png" width="50" height="50"><a></></span>
+            <span><b>TECH</b></span>
+        </button></a>
+    </div>
+
+    
+    
+
+    
+   
+
+
+   
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box with WhatsApp Subm<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+
+        .comment-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .comment-input {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .comment-input textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            resize: none;
+            font-size: 14px;
+            background-color: #f5f6f7;
+        }
+
+        .comment-input button {
+            background-color: #25d366; /* WhatsApp green color */
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .comment-input button:disabled {
+            background-color: #b0d4ff;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+
+
+    <div class="comment-box">
+        <div class="comment-input">
+            <textarea id="comment" rows="1" placeholder="Write a comment..."></textarea>
+            <button id="submitBtn" disabled>Submit to WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        const commentInput = document.getElementById('comment');
+        const submitBtn = document.getElementById('submitBtn');
+
+        const whatsappNumber = 'whatsapp:+1234567890'; // Replace with the user's WhatsApp number (use full international format)
+
+        commentInput.addEventListener('input', function() {
+            if (commentInput.value.trim() !== "") {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        });
+
+        submitBtn.addEventListener('click', function() {
+            let commentText = commentInput.value.trim();
+
+            if (commentText === "") {
+                return;
+            }
+
+            // Generate WhatsApp Click-to-Chat URL with the message
+            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(commentText)}`;
+
+            // Open WhatsApp with the comment pre-filled
+            window.open(whatsappURL, '_blank');
+
+            // Clear the comment box and disable the button
+            commentInput.value = "";
+            submitBtn.disabled = true;
+        });
+    </script>
+                    
+
+
+                     
+
+ 
+    
+
+    
+</body>
+</html>
+    
+    
+</html>
